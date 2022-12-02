@@ -1,0 +1,14 @@
+syntax= "proto3";
+
+message QARequest{
+  string text=1;
+  string question=2;
+}
+
+message QAResponse{
+  string answer=1;
+}
+
+service QAService{
+  rpc Ask(QARequest) returns (QAResponse);
+}
